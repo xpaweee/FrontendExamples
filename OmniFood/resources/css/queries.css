@@ -58,9 +58,12 @@
         width: 100%;
     }
 
-    .main-nav{
+    /* .main-nav{
         display: none;
-    }
+    } */
+
+    .mobile-nav-icon{display: inline-block;}
+    .main-nav{float:left}
 
     h1{
         font-size: 180%;

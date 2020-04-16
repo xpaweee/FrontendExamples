@@ -144,6 +144,35 @@ input[type=submit]:active
 }
 
 
+.moble-nav-icon{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+.hamburger {
+    font-size: 200%;
+    color: #fff;
+}
+
+.sticky
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.97);
+    box-shadow: 0 2px 2px #efefef;
+}
+
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited
+{
+    color: #555;
+    padding: 10px 0;
+}
+
 
 .btn-full:hover,
 .btn-full:active
@@ -159,12 +188,35 @@ input[type=submit]:active
     color: #fff;
 }
 
-.logo{
+.logo,
+.logo-black{
     height: 100px;
     width: auto;
     float: left;
     margin-top: 20px;
 }
+
+.logo-black{
+    display: none;
+}
+
+.sticky .logo{
+    display: none;
+}
+.sticky .logo-black{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+    display: block;
+}
+
+
+.sticky .main-nav{
+    margin-top: 15px;
+}
+
+
 .main-nav{
     float: right;
     list-style: none;

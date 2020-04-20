@@ -326,8 +326,91 @@
    </section>
 
 
+   <!-- contact -->
+
+   <section id="contact" class="bg-light py-5">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-9">
+                   <h3>Get In Touch</h3>
+                   <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, quaerat.</p>
+                   <form>
+                       <div class="input-group input-group-lg mb-3">
+                           <div class="input-group-prepend">
+                               <span class="input-group-text">
+                                   <i class="fas fa-user"></i>
+                               </span>
+                           </div>
+                           <input type="text" class="form-control" placeholder="Name">
+                       </div>
+                       <div class="input-group input-group-lg mb-3">
+                           <div class="input-group-prepend">
+                               <span class="input-group-text">
+                                   <i class="fas fa-envelope"></i>
+                               </span>
+                           </div>
+                           <input type="text" class="form-control" placeholder="Email">
+                       </div>
+                       <div class="input-group input-group-lg mb-3">
+                           <div class="input-group-prepend">
+                               <span class="input-group-text">
+                                   <i class="fas fa-pencil-alt"></i>
+                               </span>
+                           </div>
+                           <textarea class="form-control" placeholder="Email" rows="5"></textarea>
+                       </div>
+                       <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+                   </form>
+               </div>
+
+               <div class="col-lg-3 align-self-center">
+                   <img src="images/mlogo.png" alt="" class="img-fluid">
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- footer -->
+   <footer id="main-footer" class="py-5 bg-primary text-white">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-6 ml-auto">
+                   <p class="lead">
+                       Copyright &copy; <span id="year">2020</span>
+                   </p>
+               </div>
+           </div>
+       </div>
+   </footer>
 
 
+
+
+   <script>
+    $('#year').text(new Date().getFullYear());
+
+    //Init scrollspy
+    $('body').scrollspy({target: '#main-nav'});
+
+    //Smooth scrolling
+
+    $("#main-nav a").on('click', function(event){
+        console.log('tst');
+        if(this.hash !==""){
+            event.preventDefault();
+
+            const hash = this.hash
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            },800,function(){
+                window.location.hash=hash;
+            });
+          
+        }
+    });
+   
+</script>
     <script src="https://kit.fontawesome.com/4dfbbad399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
